@@ -3,143 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classical Dancer Eyes</title>
+    <title>Ethereal Artistic Prompt</title>
     <style>
-        /* Centers everything and sets a moody, dark background */
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #a7c5eb;
+            --accent-color: #f9d5e5;
+            --text-color: #333;
+            --background-overlay: rgba(255, 255, 255, 0.85);
+        }
+
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
             margin: 0;
-            background-color: #12121c; 
-            font-family: 'Georgia', serif;
-            color: #f4f4f5;
-        }
-
-        /* Styles the quote above the eyes */
-        .text-container {
-            margin-bottom: 60px;
-            font-size: 2.2rem;
-            font-style: italic;
-            letter-spacing: 2px;
-            text-align: center;
-            text-shadow: 2px 2px 8px rgba(0, 191, 255, 0.3);
-        }
-
-        /* Layout for the two eyes */
-        .eyes-container {
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa 0%, #e1bee7 50%, #fffde7 100%);
+            background-size: cover;
+            background-attachment: fixed;
             display: flex;
-            gap: 60px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* The main eye shape (Almond shape simulating classical dancer eyes) */
-        .eye {
-            width: 160px;
-            height: 80px;
-            background: #fff;
-            /* Creates the almond shape */
-            border-radius: 75% 15%;
-            position: relative;
-            overflow: hidden;
-            /* Thick black border simulates heavy Kajal */
-            border: 10px solid #050505;
-            box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
-            /* Connects to the blink animation below */
-            animation: blink 5s infinite;
+        .container {
+            background-color: var(--background-overlay);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 2rem 0;
         }
 
-        /* Rotates the left eye to sit horizontally */
-        .eye.left {
-            transform: rotate(45deg);
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
-        /* Mirrors and rotates the right eye */
-        .eye.right {
-            animation: blink-right 5s infinite;
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* The blue iris */
-        .iris {
-            width: 70px;
-            height: 70px;
-            background: radial-gradient(circle, #00bfff 20%, #00008b 90%);
-            border-radius: 50%;
-            position: absolute;
-            top: 5px;
-            left: 45px;
-            /* Counter-rotates so the pupil stays perfectly upright */
-            transform: rotate(-45deg);
+        .subtitle {
+            font-style: italic;
+            color: #666;
         }
 
-        /* The dark pupil */
-        .pupil {
-            width: 24px;
-            height: 24px;
-            background: #000;
-            border-radius: 50%;
-            position: absolute;
-            top: 23px;
-            left: 23px;
+        section {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid var(--secondary-color);
         }
 
-        /* The small light reflection in the eye */
-        .catchlight {
-            width: 8px;
-            height: 8px;
-            background: #fff;
-            border-radius: 50%;
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 0;
         }
 
-        /* Animation for the left eye blinking */
-        @keyframes blink {
-            0%, 92%, 100% {
-                transform: rotate(45deg) scaleY(1);
-            }
-            96% {
-                transform: rotate(45deg) scaleY(0.1);
-            }
+        p {
+            margin-bottom: 1rem;
         }
 
-        /* Animation for the right eye blinking (accounting for the mirror flip) */
-        @keyframes blink-right {
-            0%, 92%, 100% {
-                transform: rotate(45deg) scaleX(-1) scaleY(1);
-            }
-            96% {
-                transform: rotate(45deg) scaleX(-1) scaleY(0.1);
-            }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--accent-color);
+            color: #555;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .compact-prompt {
+            background-color: #f0f4f8;
+            border-left-color: var(--primary-color);
+        }
+        
+        .compact-prompt p {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            color: #2c3e50;
         }
     </style>
 </head>
 <body>
 
-    <div class="text-container">
-        "A dancer should always wear her kajal"
-    </div>
+<div class="container">
+    <header>
+        <h1>Artistic Prompt</h1>
+        <p class="subtitle">For generating an ethereal, divine artistic composition</p>
+    </header>
 
-    <div class="eyes-container">
-        <div class="eye left">
-            <div class="iris">
-                <div class="pupil">
-                    <div class="catchlight"></div>
-                </div>
+    <main>
+        <section>
+            <h2>Detailed Composition Description</h2>
+            <p>An ethereal artistic composition showing only a pair of deep blue feminine eyes, softly lined with traditional Indian kajal. The eyes are calm, angelic, and expressive, slowly blinking while gazing gently toward the viewer. Only the upper forehead is visible with a small elegant red bindi placed at the center. The rest of the face dissolves into soft shadows and flowing mist so that no nose or lips are visible.</p>
+            <p>The eyes appear almost divine — luminous blue irises with delicate reflections, long graceful eyelashes, and subtly arched brows. The composition feels mystical and sacred, like a spiritual painting.</p>
+        </section>
+
+        <section>
+            <h2>Serene Artistic Background</h2>
+            <p>A dreamy, painterly background with soft watercolor-like textures in pastel tones of sky blue, lavender, and pale gold. Gentle glowing mist surrounds the eyes, with floating particles of light resembling fireflies or stardust. Soft celestial rays spread outward creating a peaceful heavenly aura.</p>
+        </section>
+
+        <section>
+            <h2>Artistic Style Tags</h2>
+            <div class="tags">
+                <span class="tag">surreal art</span>
+                <span class="tag">spiritual painting</span>
+                <span class="tag">watercolor texture</span>
+                <span class="tag">soft brush strokes</span>
+                <span class="tag">mystical atmosphere</span>
+                <span class="tag">ethereal glow</span>
+                <span class="tag">minimal composition</span>
+                <span class="tag">divine feminine aesthetic</span>
+                <span class="tag">dreamy lighting</span>
+                <span class="tag">cinematic softness</span>
+                <span class="tag">artistic illustration</span>
             </div>
-        </div>
-        
-        <div class="eye right">
-            <div class="iris">
-                <div class="pupil">
-                    <div class="catchlight"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="compact-prompt">
+            <h2>Compact Version (Best for Generators)</h2>
+            <p>surreal artistic painting of divine feminine blue eyes with kajal, slow blinking gaze, only eyes and forehead visible, small red bindi on forehead, rest of face dissolving into mist, mystical watercolor background, soft pastel sky colors, glowing light particles, spiritual and angelic atmosphere, painterly style, soft brush strokes</p>
+        </section>
+    </main>
+</div>
 
 </body>
 </html>
